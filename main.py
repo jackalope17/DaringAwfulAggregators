@@ -1,1 +1,4 @@
-print("hello world how are you")
+from Classes.Shoes_class import Shoes
+
+Sclass = Shoes('kane', 25)
+print(Sclass.name, Sclass.age)
