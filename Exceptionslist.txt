@@ -1,0 +1,29 @@
+Format:
+  Code:
+    *********
+  Error message:
+    *********
+
+Lab 2.1.1.7
+  Code:
+    print(Kane)
+  Error message:
+        Traceback (most recent call last):
+      File "main.py", line 6, in <module>
+        labs.runlab2_1_1_7()
+      File "/home/runner/DaringAwfulAggregators/Labs.py", line 11, in runlab2_1_1_7
+        print(Kane)
+    NameError: name 'Kane' is not defined
+
+  Code:
+    print'Kane'
+  Error message:
+        Traceback (most recent call last):
+      File "main.py", line 2, in <module>
+        from Labs import Labs
+      File "/home/runner/DaringAwfulAggregators/Labs.py", line 22
+        print'Kane'
+            ^
+    SyntaxError: invalid syntax
+
+

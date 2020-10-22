@@ -1,4 +1,11 @@
 from Classes.Shoes_class import Shoes
+from Labs import Labs
+
+if True:
+  labs = Labs()
+  #labs.runlab2_1_1_7()
+  #labs.runlab2_1_1_19()
+  labs.runlab2_1_1_20()
 
 if False:
   Sclass = Shoes('kane', 25)
@@ -34,30 +41,32 @@ from vehicles.Hovercraftvehicle import Hovercraftvehicle
 from vehicles.Car import Car
 from vehicles.Truck import Truck
 
-vehicle = Vehicle()
-landV = Landvehicle()
-seaV = Seavehicle()
-airV = Airvehicle()
-spaceV = Spacevehicle()
-wheeledV = Wheeledvehicle()
-trackedV = Trackedvehicle()
-hcV = Hovercraftvehicle()
-car = Car()
-truck = Truck()
+if False:
+  vehicle = Vehicle()
+  landV = Landvehicle()
+  seaV = Seavehicle()
+  airV = Airvehicle()
+  spaceV = Spacevehicle()
+  wheeledV = Wheeledvehicle()
+  trackedV = Trackedvehicle()
+  hcV = Hovercraftvehicle()
+  car = Car()
+  truck = Truck()
 
-vehicle.blowhorn()
-landV.blowhorn()
-wheeledV.blowhorn()
-seaV.blowhorn()
-airV.blowhorn()
-spaceV.blowhorn()
-trackedV.blowhorn()
-hcV.blowhorn()
-car.blowhorn()
-truck.blowhorn()
+  vehicle.blowhorn()
+  landV.blowhorn()
+  wheeledV.blowhorn()
+  seaV.blowhorn()
+  airV.blowhorn()
+  spaceV.blowhorn()
+  trackedV.blowhorn()
+  hcV.blowhorn()
+  car.blowhorn()
+  truck.blowhorn()
 
-print(isinstance(car, Vehicle))
-print(isinstance(car, Seavehicle))
-print(issubclass(Hovercraftvehicle, Vehicle))
-print(issubclass(Wheeledvehicle, Spacevehicle))
+  print('')
+  print(isinstance(car, Vehicle))
+  print(isinstance(car, Seavehicle))
+  print(issubclass(Hovercraftvehicle, Vehicle))
+  print(issubclass(Wheeledvehicle, Spacevehicle))
 
