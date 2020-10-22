@@ -27,3 +27,38 @@ Lab 2.1.1.7
     SyntaxError: invalid syntax
 
 
+Lab 2.1.1.20
+  Code:
+    print("       *       "*2,"    *     *    "*2,"  *         *  "*2," *           * "*2,****       *****2,"   *       *   "*2,"   *       *   "*2,"   *********   "*2, sep='\n'*2)
+  Error message:
+        Traceback (most recent call last):
+      File "main.py", line 2, in <module>
+        from Labs import Labs
+      File "/home/runner/DaringAwfulAggregators/Labs.py", line 50
+        print("       *       "*2,"    *     *    "*2,"  *         *  "*2," *           * "*2,****       *****2,"   *       *   "*2,"   *       *   "*2,"   *********   "*2, sep='\n'*2)
+                                                                                                ^
+    SyntaxError: invalid syntax
+
+    Code:
+      print"       *       "*2,"    *     *    "*2,"  *         *  "*2," *           * "*2,"****       ****"*2,"   *       *   "*2,"   *       *   "*2,"   *********   "*2, sep='\n'*2
+    Error message:
+            Traceback (most recent call last):
+        File "main.py", line 2, in <module>
+          from Labs import Labs
+        File "/home/runner/DaringAwfulAggregators/Labs.py", line 50
+          print"       *       "*2,"    *     *    "*2,"  *         *  "*2," *           * "*2,"****       ****"*2,"   *       *   "*2,"   *       *   "*2,"   *********   "*2, sep='\n'*2
+              ^
+      SyntaxError: invalid syntax
+
+    Code:
+      Print("       *       "*2,"    *     *    "*2,"  *         *  "*2," *           * "*2,"****       ****"*2,"   *       *   "*2,"   *       *   "*2,"   *********   "*2, sep='\n'*2)
+    Error message:
+            Traceback (most recent call last):
+        File "main.py", line 8, in <module>
+          labs.runlab2_1_1_20()
+        File "/home/runner/DaringAwfulAggregators/Labs.py", line 50, in runlab2_1_1_20
+          Print("       *       "*2,"    *     *    "*2,"  *         *  "*2," *           * "*2,"****       ****"*2,"   *       *   "*2,"   *       *   "*2,"   *********   "*2, sep='\n'*2)
+      NameError: name 'Print' is not defined
+
+    Code:
+      

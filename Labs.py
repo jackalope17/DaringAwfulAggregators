@@ -46,13 +46,18 @@ class Labs:
     print("       *","    *     *","  *         *"," *           *","****       ****","   *       *","   *       *","   *********", sep='\n'*2)
 
     #2. duplicate the arrow, placing both arrows side by side; note: a string may be multiplied by using the following trick: "string" * 2 will produce "stringstring" (we'll tell you more about it soon)
-    print("       *","    *     *","  *         *"," *           *","****       ****","   *       *","   *       *","   *********", sep='\n'*2)
-    print("       *","    *     *","  *         *"," *           *","****       ****","   *       *","   *       *","   *********", sep='\n'*2)
+    print("       *       "*2,"    *     *    "*2,"  *         *  "*2," *           * "*2,"****       ****"*2,"   *       *   "*2,"   *       *   "*2,"   *********   "*2, sep='\n'*2)
     
     #3. remove any of the quotes, and look carefully at Python's response; pay attention to where Python sees an error - is this the place where the error really exists?
-    
+      #bad code:  print("       *       "*2,"    *     *    "*2,"  *         *  "*2," *           * "*2,****       *****2,"   *       *   "*2,"   *       *   "*2,"   *********   "*2, sep='\n'*2)
+      #yes, it is pointing to where the quotes are gone.
+
     #4. do the same with some of the parentheses;
+      #bad code:  print"       *       "*2,"    *     *    "*2,"  *         *  "*2," *           * "*2,"****       ****"*2,"   *       *   "*2,"   *       *   "*2,"   *********   "*2, sep='\n'*2
     
     #5.change any of the print words into something else, differing only in case (e.g., Print) - what happens now?
+      #bad code:  Print("       *       "*2,"    *     *    "*2,"  *         *  "*2," *           * "*2,"****       ****"*2,"   *       *   "*2,"   *       *   "*2,"   *********   "*2, sep='\n'*2)
+      #it no longer knows what do with the code
     
     #6. replace some of the quotes with apostrophes; watch what happens carefully.
+      #it works as intended
