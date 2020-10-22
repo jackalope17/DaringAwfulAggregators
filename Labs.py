@@ -38,10 +38,16 @@ class Labs:
 
 
   def runlab2_1_1_20(self):
+    #starting arrow size below
+    print("    *","   * *","  *   *"," *     *","***   ***","  *   *","  *   *","  *****", sep='\n')
+
     #1. minimize the number of print() function invocations by inserting the \n sequence into the strings
     #make the arrow twice as large (but keep the proportions)
+    print("       *","    *     *","  *         *"," *           *","****       ****","   *       *","   *       *","   *********", sep='\n'*2)
+
     #2. duplicate the arrow, placing both arrows side by side; note: a string may be multiplied by using the following trick: "string" * 2 will produce "stringstring" (we'll tell you more about it soon)
-    print("    *","   * *","  *   *"," *     *","***   ***","  *   *","  *   *","  *****", sep='\n'*2)
+    print("       *","    *     *","  *         *"," *           *","****       ****","   *       *","   *       *","   *********", sep='\n'*2)
+    print("       *","    *     *","  *         *"," *           *","****       ****","   *       *","   *       *","   *********", sep='\n'*2)
     
     #3. remove any of the quotes, and look carefully at Python's response; pay attention to where Python sees an error - is this the place where the error really exists?
     
