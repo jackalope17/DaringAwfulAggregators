@@ -60,5 +60,5 @@ Lab 2.1.1.20
           Print("       *       "*2,"    *     *    "*2,"  *         *  "*2," *           * "*2,"****       ****"*2,"   *       *   "*2,"   *       *   "*2,"   *********   "*2, sep='\n'*2)
       NameError: name 'Print' is not defined
 
-    Code:
-      
+  
+  

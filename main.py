@@ -5,7 +5,8 @@ if True:
   labs = Labs()
   #labs.runlab2_1_1_7()
   #labs.runlab2_1_1_19()
-  labs.runlab2_1_1_20()
+  #labs.runlab2_1_1_20()
+  labs.runlab2_1_2_11()
 
 if False:
   Sclass = Shoes('kane', 25)

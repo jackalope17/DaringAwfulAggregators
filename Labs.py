@@ -61,3 +61,13 @@ class Labs:
     
     #6. replace some of the quotes with apostrophes; watch what happens carefully.
       #it works as intended
+
+
+  def runlab2_1_2_11(self):
+    #Write a one-line piece of code, using the print() function, as well as the newline and escape characters, to match the expected result outputted on three lines.
+    print('"I\'m"')
+    print('""learning""')
+    print('"""Python"""')
+
+
+  
