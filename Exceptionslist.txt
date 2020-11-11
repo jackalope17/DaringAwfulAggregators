@@ -61,4 +61,62 @@ Lab 2.1.1.20
       NameError: name 'Print' is not defined
 
   
-  
+Lab 3.1.2.14
+  code:
+    run = 1
+    while run == 1:      
+      
+      while True:
+        try:
+          blocks = int(input("Enter the number of blocks: "))
+          break
+        except ValueError:
+          print("The value entered was not an integer. Please reenter your value.")
+      
+      height = 0
+      inLayer = 1
+
+      while inLayer <= blocks:
+        height += 1
+        blocks -= inLayer
+        inLayer += 1
+
+      print("The height of the pyramid:", height)
+      redo = (input('Would you like to recalculate?(y/n): '))
+      redo = redo.upper()
+      while redo not in 'YN':
+        
+          redo = input('Please enter either "y" to run the program again, or "n" to stop the program.','\nWould you like to recalculate?(y/n): ').upper()
+
+      if redo == 'Y':
+          run = 1
+      elif redo == 'N':
+          run = 0
+  Error message:
+    Traceback (most recent call last):
+      File "main.py", line 21, in <module>
+        labs.runlab3_1_2_14()
+      File "/home/runner/ClassFall2020/Labs.py", line 340, in runlab3_1_2_14
+       redo = input('Please enter either "y" to run the program again, or "n" to stop the program.','\nWould you like to recalculate?(y/n): ').upper()
+    TypeError: input expected at most 1 argument, got 2
+
+
+Lab 3.1.4.6:
+  code:
+     hatList = [1, 2, 3, 4, 5]
+
+    print('Please choose a number to add to the hat: '), newHatNum = input()
+    hatList[2] = newHatNum
+    
+
+    # Step 3: write a line of code here that prints the length of the existing list.
+
+    print(hatList)
+  Error message:
+        Traceback (most recent call last):
+      File "main.py", line 2, in <module>
+        from Labs import Labs
+      File "/home/runner/ClassFall2020/Labs.py", line 356
+        print('Please choose a number to add to the hat: '), newHatNum = input()
+        ^
+    SyntaxError: cannot assign to function call
