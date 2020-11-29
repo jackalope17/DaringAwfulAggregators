@@ -426,7 +426,7 @@ class Labs:
     #4. Of course, you can (and should) use the previously written and tested function (LAB 4.1.3.6). It may be very helpful. We encourage you to use a list filled with the months' lengths. You can create it inside the function - this trick will significantly shorten the code
 
     #5. Your task is to write and test a function which takes three arguments (a year, a month, and a day of the month) and returns the corresponding day of the year, or returns None if any of the arguments is invalid.
-    from datetime import datetime, date
+   
     yr = int(input("Enter a year: "))
     mo = int(input("Enter a month: "))
     dy = int(input("Enter a day: "))
@@ -464,7 +464,6 @@ class Labs:
     def daysInMonth(year, month):
       leapYr = isYearLeap(year)
 
-      #if(month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12):
       if(mo == 1 or mo == 3 or mo == 5 or mo == 7 or mo == 8 or mo == 10 or mo == 12):
         return 31
       elif((mo == 2) and (leapYr == True)):
@@ -500,3 +499,102 @@ class Labs:
       return N
 
     print(dayOfYear(yr, mo, dy))
+
+
+  def runlab5_1_6_4(self):
+    # 1. Your task is to write a function able to input integer values and to check if they are within a specified range.The function should:
+
+    # 2. accept three arguments: a prompt, a low acceptable limit, and a high acceptable limit;
+    # 3. if the user enters a string that is not an integer value, the function should emit the message Error: wrong input, and ask the user to input the value again;
+    # 4. if the user enters a number which falls outside the specified range, the function should emit the message Error: the value is not within permitted range (min..max) and ask the user to input the value again;
+    # 5. if the input value is valid, return it as a result.
+    UN = 0
+    def readint(prompt, min, max):
+      while True:
+        try:
+          UN = int(input('Please enter a whole number from -10 to 10: '))
+          if UN >= -10 and UN <= 10:
+            return UN
+            break
+          else:
+            print('Error: the value is not within permitted range (min to max)')
+            continue
+        except ValueError:
+          print('Wrong type of input, please reenter with correct input type.')
+    
+    v = readint(UN, -10, 10)
+
+    print("The number is:", v)
+
+
+  def runlab5_1_9_18(self):
+    #1. Your task is to write your own function, which behaves almost exactly like the original split() method, i.e.:
+
+    #2. it should accept exactly one argument - a string;
+    #3. it should return a list of words created from the string, divided in the places where the string contains whitespaces;
+    #4. if the string is empty, the function should return an empty list;
+    #5. its name should be mysplit()
+
+    def mysplit(string, delimiters=' \t\n'):
+      result = []
+      word = ''
+      for c in string:
+        if c not in delimiters:
+            word += c
+        elif word:
+            result.append(word)
+            word = ''
+
+      if word:
+        result.append(word)
+
+      return result
+
+    print(mysplit("To be or not to be, that is the question"))
+    print(mysplit("To be or not to be,that is the question"))
+    print(mysplit("   "))
+    print(mysplit(" abc "))
+    print(mysplit(""))
+
+
+  def runlab5_1_10_6(self):
+    # Your task is to write a program which is able to simulate the work of a seven-display device, although you're going to use single LEDs instead of segments.
+
+    # Each digit is constructed from 13 LEDs (some lit, some dark, of course) - that's how we imagine it:
+
+       # ### ### # # ### ### ### ### ### ### 
+       #   #   # # # #   #     # # # # # # # 
+       # ### ### ### ### ###   # ### ### # # 
+       # #     #   #   # # #   # # #   # # # 
+       # ### ###   # ### ###   # ### ### ###
+
+    # Note: the number 8 shows all the LED lights on.
+
+    # Your code has to display any non-negative integer number entered by the user.
+
+    # Tip: using a list containing patterns of all ten digits may be very helpful.
+
+    representations = {
+      '0': ('###', '# #', '# #', '# #', '###'),
+      '1': ('  #', '  #', '  #', '  #', '  #'),
+      '2': ('###', '  #', '###', '#  ', '###'),
+      '3': ('###', '  #', '###', '  #', '###'),
+      '4': ('# #', '# #', '###', '  #', '  #'),
+      '5': ('###', '#  ', '###', '  #', '###'),
+      '6': ('###', '#  ', '###', '# #', '###'),
+      '7': ('###', '  #', '  #', '  #', '  #'),
+      '8': ('###', '# #', '###', '# #', '###'),
+      '9': ('###', '# #', '###', '  #', '###'),
+      '.': ('   ', '   ', '   ', '   ', '  #'),
+    }
+
+    def seven_segment(number):
+      # treat the number as a string, since that makes it easier to deal with
+      # on a digit-by-digit basis
+      digits = [representations[digit] for digit in str(number)]
+      # now digits is a list of 5-tuples, each representing a digit in the given number
+      # We'll print the first lines of each digit, the second lines of each digit, etc.
+      for i in range(5):
+          print("  ".join(segment[i] for segment in digits))
+
+    print(seven_segment(input('Please enter an integer: ')))

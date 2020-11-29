@@ -22,7 +22,10 @@ if True:
   #labs.runlab3_1_4_6()
   #labs.runlab3_1_4_13()
   #labs.runlab3_1_6_9()
-  labs.runlab4_1_3_8()
+  #labs.runlab4_1_3_8()
+  #labs.runlab5_1_6_4()
+  #labs.runlab5_1_9_18()
+  labs.runlab5_1_10_6()
 
 
 if False:
